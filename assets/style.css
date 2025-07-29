@@ -1,0 +1,144 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("./fonts/Karla-VariableFont_wght.ttf");
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --lightcyan: hsl(179, 47%, 52%);
+    --brightyellow: hsl(71, 73%, 54%);
+    --lightgray: hsl(204, 43%, 93%);
+    --grayishblue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+
+    --text-base: 16px;
+    --font-regular: 400;
+    --font-bold: 700;
+
+    --sans-serif: "Karla", sans-serif; 
+
+    /* Set root font size */
+    font-size: var(--text-base);
+}
+
+body{
+    font-family: 1rem;
+    font-family: var(--sans-serif);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--lightgray);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 10px 13px 44px -30px hsl(179, 62%, 43%);
+}
+
+.top {
+    padding: 2rem;
+    background-color: var(--white);
+}
+
+.top > h1 {
+    margin-bottom: 1.5rem;
+    color: var(--cyan);
+    font-size: 2rem;
+}
+
+.top > p {
+    color: var(--grayishblue);
+    line-height: 1.5;
+}
+
+.top > p.important {
+    font-weight: var(--font-bold);
+    color: var(--brightyellow);
+    margin-bottom: 1rem;
+}
+
+.bottom > .left,
+.bottom > .right {
+    padding: 2rem;
+}
+
+.bottom > .left {
+    background-color: var(--cyan);
+    color: var(--white);
+}
+
+.left > h2, 
+.left > p {
+    margin-bottom: 1rem;
+}
+
+.left > .amount {
+    font-size: 2.8rem;
+    font-weight: var(--font-bold);
+}
+
+.left > .amount > span {
+    font-size: 1.2rem;
+    vertical-align: middle;
+    font-weight: var(--font-regular);
+    color: var(--lightgray);
+}
+
+.left > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--brightyellow);
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+    color: var(--white);
+    font-weight: var(--font-bold);
+    box-shadow: 10px 13px 44px -30px hsl(179, 62%, 43%);
+}
+
+.right {
+    background-color: var(--lightcyan);
+    color: var(--white);
+}
+
+.right > h2 {
+    margin-bottom: 1rem;
+}
+
+.right > p {
+    line-height: 2;
+    color: var(--lightgray);
+}
+
+
+/* Target large screens */
+@media screen and (min-width: 800px) {
+    
+    .container {
+        width: 800px;
+    }
+
+    .bottom {
+        display: flex;
+    }
+
+    .left, .right {
+        width: 50%;
+    }
+
+
+}
